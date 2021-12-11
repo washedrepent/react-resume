@@ -1,38 +1,130 @@
-.App {
-  text-align: center;
+/*
+#26547C //main color
+#439A86 //secondary color
+#F4AC45 //highlight color
+#A63A50 //secondary highlight color
+#FCFCFC //background color
+
+*/
+html {
+    background-color: #439a86;
+    font-family: "Open Sans", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+    font-size: 1.5em;
+    color: #red;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #f4ac45;
+    background-color: #fcfcfc;
+}
+.left-side {
+    text-align: center;
+    padding: 1em;
+}
+.right-side {
+    text-align: left;
+    border-top: 2px solid #f4ac45;
+    padding: 1em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.left-side-container,
+.right-side-container {
+    display: flex;
+    flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
+.profilePic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.personal-info-text h1 {
+    color: #26547c;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.personal-info-text h2 {
+    font-size: 1.5rem;
+    color: #a63a50;
+    font-weight: bold;
+}
+.personal-info-text h3 {
+    font-size: 1.2rem;
+    color: #222;
+    font-weight: bold;
+    text-align: center;
+}
+.personal-info-text p {
+    font-size: 1rem;
+    color: #222;
+    font-weight: bold;
+    word-wrap: break-word;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    align-items: center;
+}
+
+.skill-title {
+    color: #a63a50;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: left;
+}
+.skill h3 {
+    margin: 0;
+}
+.skill-bar {
+    height: 30px;
+    background-color: #26547c;
+    border-radius: 10px;
+}
+
+.skill-bar-fill {
+    height: 30px;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+}
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        width: 90%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-areas: "left-side left-side right-side right-side right-side right-side right-side right-side right-side right-side";
+        gap: 0px;
+    }
+    .left-side {
+        grid-area: left-side;
+    }
+    .right-side {
+        grid-area: right-side;
+        border-left: 2px solid #f4ac45;
+        border-top: none;
+    }
+
+    .skills {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1em;
+        align-items: center;
+    }
 }
