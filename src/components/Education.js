@@ -1,8 +1,9 @@
 const Education = function (props) {
     return (
-        <>
-            <p>Education Component</p>
-        </>
+        <section>
+            <h2>Education</h2>
+            <div className='education'></div>
+        </section>
     );
 };
 

@@ -40,13 +40,13 @@ const Skill = (props) => {
     return (
         <div className='skill' key={props.title}>
             <h3 className='skill-title'>{props.title}</h3>
+
             <div className='skill-bar'>
+                <h3 className='skill-percent'>{props.percentage}%</h3>
                 <div
                     className='skill-bar-fill'
                     style={calculateStyle(props.percentage)}
-                >
-                    <h3>{props.percentage}%</h3>
-                </div>
+                ></div>
             </div>
         </div>
     );
