@@ -7,7 +7,7 @@
 
 */
 html {
-    background-color: #439a86;
+    background-image: url(./bg-pattern.png);
     font-family: "Open Sans", sans-serif;
 }
 
@@ -26,11 +26,16 @@ h2 {
 section {
     margin: 1rem;
 }
-
+.section-header {
+    font-size: 1.5rem;
+    color: #26547c;
+    font-weight: 800;
+    text-align: center;
+}
 .container {
     display: flex;
     flex-direction: column;
-    border: 2px solid #f4ac45;
+    border: 3px solid #26547c;
     background-color: #fcfcfc;
 }
 .left-side {
@@ -39,7 +44,7 @@ section {
 }
 .right-side {
     text-align: left;
-    border-top: 2px solid #f4ac45;
+    border-top: 3px solid #26547c;
     padding: 1em;
 }
 
@@ -49,11 +54,16 @@ section {
     flex-direction: column;
 }
 
+.left-side-container {
+    gap: 2rem;
+}
+
 .profilePic {
-    width: 150px;
-    height: 150px;
+    width: 170px;
+    height: 170px;
     border-radius: 50%;
     margin: 0 auto;
+    border: 3px solid #a63a50;
 }
 
 .personal-info-text h1 {
@@ -85,13 +95,14 @@ section {
     grid-template-columns: repeat(2, 1fr);
     gap: 1em;
     align-items: center;
+    padding-top: 1em;
 }
 
 .skill-title {
     color: #a63a50;
     font-size: 1.1rem;
     font-weight: bold;
-    text-align: left;
+    text-align: center;
     margin: 0;
 }
 .skill {
@@ -131,31 +142,33 @@ section {
     align-items: center;
 }
 .experience {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 1em;
+    padding-top: 2em;
+    align-items: stretch;
 }
 .experience-item {
-    justify-self: center;
-    padding: 0px;
-    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0.5em;
+    background-color: #732634;
+    border-radius: 5px;
+    justify-content: space-around;
 }
 .experience-company {
-    color: #fcfcfc;
-    background-color: #26547c;
+    color: #fff;
     font-size: 1.3rem;
     font-weight: 700;
     text-align: center;
     margin: 0;
     padding: 0.5em 1em;
-    border: 3px solid #26547c;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
 }
 .experience-title {
     font-size: 1.1rem;
-    color: #000;
+    color: #1e4363;
     background-color: #f4ac45;
     font-weight: 800;
     text-align: center;
@@ -164,9 +177,8 @@ section {
 }
 .experience-location {
     font-size: 1rem;
-    color: #f4ac45;
-    background-color: #26547c;
-    font-weight: 800;
+    color: #fff;
+    font-weight: 700;
     text-align: center;
     padding: 0.5em 0;
     margin: 0;
@@ -174,15 +186,61 @@ section {
 
 .experience-dates {
     font-size: 1rem;
-    color: #f4ac45;
-    background-color: #26547c;
-    font-weight: 800;
+    color: #fff;
+    font-weight: 700;
     text-align: center;
     margin: 0;
     padding: 0.3em 0.5em;
-    border: 3px solid #26547c;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+}
+
+.education {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    padding-top: 2em;
+    align-items: stretch;
+}
+
+.education-item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0.5em;
+    background-color: #26547c;
+    border-radius: 5px;
+    justify-content: space-around;
+}
+
+.education-school {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    padding: 0.5em 1em;
+}
+.education-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: end;
+}
+.education-bottom {
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    padding: 0.5em 0;
+    margin: 0;
+}
+.education-program {
+    font-size: 1.2rem;
+    color: #f4ac45;
+    font-weight: 800;
+    text-align: center;
+    padding: 0.5em 0;
+    margin: 0;
 }
 
 @media screen and (min-width: 1024px) {
@@ -196,10 +254,11 @@ section {
     }
     .left-side {
         grid-area: left-side;
+        align-self: center;
     }
     .right-side {
         grid-area: right-side;
-        border-left: 2px solid #f4ac45;
+        border-left: 3px solid #26547c;
         border-top: none;
     }
 
@@ -210,9 +269,13 @@ section {
         align-items: center;
     }
 
-    .experience {
-        display: flex;
+    .experience,
+    .education {
         flex-direction: row;
         justify-content: space-around;
+    }
+    .experience-item,
+    .education-item {
+        width: 90%;
     }
 }

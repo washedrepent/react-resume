@@ -9,7 +9,7 @@ const Skills = function (props) {
 
     return (
         <section>
-            <h2>Skills</h2>
+            <h2 className='section-header'>Skills</h2>
             <div className='skills'>{parsedSkills}</div>
         </section>
     );

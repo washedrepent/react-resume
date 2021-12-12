@@ -8,7 +8,6 @@ const educationData = [
     {
         school: "Algonquin College, Ottawa, ON",
         degree: "Certificate (Honours)",
-        major: "Computer Science",
         program: "General Arts and Science Pre-Technology",
         graduation: "May 2010",
     },

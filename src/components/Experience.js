@@ -15,7 +15,7 @@ const Experience = function (props) {
     };
     return (
         <section>
-            <h2>Experience</h2>
+            <h2 className='section-header'>Experience</h2>
             <div className='experience'>
                 {parseExperieceData(props.experienceData)}
             </div>
